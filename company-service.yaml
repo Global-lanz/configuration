@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: company-service-default
   datasource:
     url: jdbc:postgresql://localhost:5432/sm-company
     username: postgres
