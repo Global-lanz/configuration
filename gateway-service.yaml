@@ -1,8 +1,30 @@
-server:
-  port: 8080
 spring:
   application:
-    name: gateway
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: authentication-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/auth/**
+        - id: company-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/company/**
+        - id: customer-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/customer/**
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionLocator: INFO
 
 #Eureka
 eureka:
