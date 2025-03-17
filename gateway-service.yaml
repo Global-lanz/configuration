@@ -5,15 +5,15 @@ spring:
     gateway:
       routes:
         - id: authentication-service
-          uri: http://localhost:8081
+          uri: lb://AUTHENTICATION-SERVICE
           predicates:
             - Path=/auth/**
         - id: company-service
-          uri: http://localhost:8082
+          uri: lb://COMPANY-SERVICE
           predicates:
             - Path=/company/**
         - id: customer-service
-          uri: http://localhost:8083
+          uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path=/customer/**
 logging:
