@@ -1,6 +1,6 @@
 spring:
   application:
-    name: company-service-default
+    name: customer-service-default
   datasource:
     url: jdbc:postgresql://localhost:5432/sm-customer
     username: postgres
