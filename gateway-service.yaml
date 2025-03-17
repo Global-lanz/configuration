@@ -16,6 +16,12 @@ spring:
           uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path=/customer/**
+        - id: eureka-server
+          uri: http://localhost:8761/
+          predicates:
+            - Path=/eureka/main
+          filters:
+            - SetPath=/
 logging:
   level:
     root: info
