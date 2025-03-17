@@ -1,3 +1,5 @@
+server:
+  port: 8081
 spring:
   application:
     name: customer-service-default
@@ -16,5 +18,3 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://localhost:8671/eureka
-server:
-  port: 8081
