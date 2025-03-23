@@ -7,7 +7,7 @@ spring:
         - id: authentication-service
           uri: lb://AUTHENTICATION-SERVICE
           predicates:
-            - Path=/auth/**
+            - Path=/authentication/**
         - id: company-service
           uri: lb://COMPANY-SERVICE
           predicates:
